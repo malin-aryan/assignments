@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ASSIGNMENT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<!--[Wrapper Start]-->
+<div class="wrapper">
+<!--Page Wrapper-->
+<div class="page-wrapper">
+<!--sidebar menu-->
+  <div class="sidebar-menu">  
+	<!--User-->
+	<div class="top-user">
+		<div class="user-img">
+				<img src="images/user-img.png" alt="User Image">
+		</div><!--user image-->
+		<div class="user-txt">
+			<p>J Deo</p>
+			<p>johndeo@thisismyemail.com<p>
+		</div><!--/user text-->
+	</div>
+	<!--[Top User]-->
+  
+    <div  class="logo">
+		<a href="javascript:void(0)" class="sidebar-icon">
+			<p class="text">Expand</p>
+			<p class="arrow" ><i class="fa fa-angle-right" aria-hidden="true"></i></p>			
+		</a>	
+	</div>	
+	
+   <!--Menu Start-->
+    <div class="menu">
+      <ul id="menu" >
+        <li id="menu-home" ><a href="#"><i class="fa fa-user"  aria-hidden="true"></i><span>Contact</span></a></li>
+        <li class="product"><a href="#" class="arrow"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span> Product</span></a>
+          <ul>
+            <li><a href="#">Product</a></li>
+			<li><a href="#">Product Template</a></li>
+			<li><a href="#" >Product</a></li>
+			<li><a href="#">Categories</a></li>
+			<li><a href="#">Attributes</a></li>
+			<li><a href="#">Tree Nodes</a></li>
+			<li><a href="#">Gift Card</a></li>
+			<li><a href="#">Bill of Material (BOP)</a></li>
+			<li><a href="#">Price List</a></li>
+			<li><a href="#">Product Suppliers</a></li>
+			<li><a href="#">Attributes Set</a></li>
+			<li><a href="#">Report</a></li>
+			<li><a href="#">Import Product Locations</a></li>
+            
+          </ul>
+        </li>
+        <li id="menu-comunicacao" ><a href="#"><i class="fa fa-usd" aria-hidden="true"></i><span> Sale</span></a>
+         
+        </li>
+        <li id="menu-academico" ><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span>Purchase</span></a>
+        
+        </li>
+        
+        <li><a href="#"><i class="fa fa-truck" aria-hidden="true"></i><span>Shipping</span></a></li>
+        <li><a href="#"><i class="fa fa-table" aria-hidden="true"></i><span>Inventory &amp; Stock</span></a></li>
+		<li><a href="#"><i class="fa fa-line-chart" aria-hidden="true"></i><span>Production</span></a></li>
+		<li><a href="#"><i class="fa fa-university" aria-hidden="true"></i><span>Financial</span></a></li>
+		<li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i><span>Setting</span></a></li>		
+		<li><a href="#"><i class="fa fa-briefcase" aria-hidden="true"></i><span>Administration</span></a></li>
+      </ul>
+    </div>  <!--[Menu End]-->
+<!--Second Menu Start-->
+    <div class="menu menu2">
+      <ul id="menu" >	          
+		<li><a href="#"><i class="fa fa-search" aria-hidden="true"></i><span>Serach</span></a></li>
+		<li><a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i><span>Help &amp; Support</span></a></li>		
+		<li><a href="#"><i class="fa fa-th-large" aria-hidden="true"></i><span>Change Application</span></a></li>
+      </ul>
+    </div>  <!--[Second Menu End]-->		
+  </div><!--[Sidebar Menu]-->
+</div><!--[Page Wrapper]-->
+
+</div><!--[/Wrapper End]-->
+
+
+
+<!--[Script]-->
+
+<script src="js/jquery-2.1.1.min.js"></script> 
+<script>
+var toggle = true;
+            
+$(".sidebar-icon").click(function() {                
+  if (toggle)
+  {
+    $(".page-wrapper").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
+    $("#menu span").css({"position":"absolute"});
+	$(".text").html("Collapse");	
+	//$("#menu li.product a").addClass("dropdown-toggle");
+	//$("#menu li.product a").attr("data-toggle", "dropdown");
+	//$("#menu li.product ul").addClass("dropdown-menu");
+	
+	
+  }
+  else
+  {
+    $(".page-wrapper").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
+    setTimeout(function() {
+      $("#menu span").css({"position":"relative"});
+    }, 400);
+	$(".text").html("Expand");
+  }
+                
+                toggle = !toggle;
+            });
+</script>
+
+
+
+<!--[/Script]-->
+</body>
+</html>

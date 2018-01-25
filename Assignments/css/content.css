@@ -1,0 +1,77 @@
+@charset "utf-8";
+/* CSS Document */
+
+.page-wrapper {min-width: 1260px; position: relative; top: 0; left: 0; right: 0;  bottom: 0; width: 100%; height: 100%;  margin: 0px auto;}
+.page-wrapper .sidebar-menu .top-user { width:100%; padding:28px 0 0 28px; box-sizing:border-box; float:left; margin:0 0 100px 0px;} 
+.page-wrapper .sidebar-menu .top-user .user-img{ width:30%; float:left;}
+.page-wrapper .sidebar-menu .top-user .user-txt{ width:70%; float:left; padding:15px 0 0 0;  transition: all 100ms linear;  transition-delay: 100ms; 
+ visibility: hidden; opacity:0; }
+.page-wrapper .sidebar-menu .top-user .user-txt p{ font-size:20px; color:#ffffff;  transition: all 1000ms linear;  transition-delay: 1000ms;}
+.page-wrapper.sidebar-collapsed  .sidebar-menu .top-user .user-txt{ visibility: visible; ;  opacity: 1;  transition: all 200ms linear; 
+ transition-delay: 200ms; display:block; }
+
+.sidebar-menu { position: fixed; float: left;  width:165px;  top:0;  left: 0;  bottom: 0;  background-color: #303641;  color: #aaabae;  font-family: "Segoe UI";
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);  z-index: 1;}
+.page-wrapper.sidebar-collapsed { padding-right: 500px; transition: all 100ms linear;  transition-delay: 300ms;}
+.page-wrapper.sidebar-collapsed-back {  padding-right: 165px;  transition: all 100ms linear;}
+.page-wrapper.sidebar-collapsed .sidebar-menu {  width: 500px;  transition: all 100ms ease-in-out;  transition-delay: 300ms;}
+.page-wrapper.sidebar-collapsed-back .sidebar-menu {  width: 165px;  transition: all 100ms ease-in-out;}
+.sidebar-menu #menu span { display:none; transition: all 300ms ease-in-out;  transition-delay: 300ms; }
+.page-wrapper.sidebar-collapsed #menu span { display:inline-block;  transition: all 300ms ease-in-out;  transition-delay: 300ms;}
+.page-wrapper.sidebar-collapsed-back #menu span {  opacity:0; }
+
+.menu{ float:left; width:100%;} 
+.menu2{ position:absolute; bottom:20px;}
+#menu {  list-style: none;  margin: 0;  padding: 0;  margin-bottom: 20px;}
+#menu li {  position: relative;  margin: 0;  font-size: 12px;   padding: 0;}
+#menu li ul {  opacity: 0;  height: 0px; background:#f5f5f5; z-index:10;}
+#menu li a {  font-style: normal;  font-weight: 400;  position: relative; font-size:25px;  display: block;  
+padding:12px 20px 12px 64px;  color: #aaabae;  white-space: nowrap;  z-index: 2; text-transform:uppercase;}
+#menu li a .fa{ margin:0 60px 0 0px; font-size:35px; width:30px;}
+#menu li a:hover {  color: #ffffff;  background-color: #333944;  transition: color 250ms ease-in-out, background-color 250ms ease-in-out;}
+#menu li ul li a{ text-transform: capitalize  ;} 
+#menu>li.product:hover >a:before {content: "";position: absolute;top:50%;left: 100%; margin:-5px 0 0 0;
+border-top: 10px solid transparent;  border-bottom:10px solid transparent;   border-left:10px solid #202b3b; z-index:20;  }
+#menu li ul li a:hover {  color: #2b303a;  background-color: #dce1e9;  transition: color 250ms ease-in-out, background-color 250ms ease-in-out;}
+#menu li.active > a {  background-color: #2b303a;  color: #ffffff;}
+#menu ul li { background-color: #f7f7f7; }
+#menu ul {  list-style-type: none;  margin: 0;  padding: 0;}
+#menu li ul { position: absolute;  visibility: hidden;  left: 100%;  top: -1px;  background-color: #f7f7f7; 
+ box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);  opacity: 0;  transition: opacity 0.1s linear; z-index:0;  }
+#menu li ul li{ background:#f7f7f7;}
+#menu li ul li:first-child a{ color:#42587a; text-transform:uppercase; font-weight:bold;}
+#menu li ul li:first-child a:hover{ background:none;}
+#menu li ul li a{ background:#f7f7f7;}
+#menu li:hover > ul {  visibility: visible;  opacity: 1;}
+#menu .fa { margin-right: 5px; }
+
+.sidebar-collapsed #menu>li{ float:left; width:100%;}
+.sidebar-collapsed #menu>li>ul{ height:none; visibility:hidden;  z-index:10; } 
+.sidebar-collapsed #menu>li>ul { z-index:10;}
+.sidebar-collapsed #menu li:hover ul { width :100%;  float:left; top:100%; left:0px; position:static; height:auto; visibility:visible; }
+.sidebar-collapsed #menu>li.product:hover>a.arrow:before {content: ""; position: absolute; top:100%; left:47%; 
+border-left:10px solid transparent;  border-right:10px solid transparent;  border-top:10px solid #202b3b;   z-index:20;}
+
+.sidebar-collapsed #menu>li.product a{ display:block;}
+
+.logo {  width:40px; background:#dbe0e8; height:100%;   box-sizing: border-box; position:absolute; right:-40px; top:0px; display:table; 
+text-align: center; overflow:hidden;
+background: -moz-linear-gradient(0deg, rgba(182,186,192,1) 0%, rgba(182,186,192,1) 1%, rgba(219,224,232,1) 100%); /* ff3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(182,186,192,1)), color-stop(1%, rgba(182,186,192,1)), color-stop(100%, rgba(219,224,232,1))); /* safari4+,chrome */
+background: -webkit-linear-gradient(0deg, rgba(182,186,192,1) 0%, rgba(182,186,192,1) 1%, rgba(219,224,232,1) 100%); /* safari5.1+,chrome10+ */
+background: -o-linear-gradient(0deg, rgba(182,186,192,1) 0%, rgba(182,186,192,1) 1%, rgba(219,224,232,1) 100%); /* opera 11.10+ */
+background: -ms-linear-gradient(0deg, rgba(182,186,192,1) 0%, rgba(182,186,192,1) 1%, rgba(219,224,232,1) 100%); /* ie10+ */
+background: linear-gradient(90deg, rgba(182,186,192,1) 0%, rgba(182,186,192,1) 1%, rgba(219,224,232,1) 100%); /* w3c */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b6bac0', endColorstr='#dbe0e8',GradientType=1 ); /* ie6-9 */  }
+.logo  .sidebar-icon  { display: table-cell; vertical-align: middle;  text-decoration:none; width:40px;   }
+.page-wrapper .sidebar-icon .fa {    transition: all 300ms ease-in-out; font-size:40px; color:#7c7c7c; }
+.page-wrapper.sidebar-collapsed .sidebar-icon .fa {  transform: rotate(180deg);  transition: all 300ms ease-in-out; font-size:40px; color:#7c7c7c; }
+.page-wrapper .sidebar-icon p{ width:40px; margin:0px;}
+.page-wrapper .sidebar-icon p.text{transform: rotate(-90deg); transition: all 300ms ease-in-out; font-size:22px; text-transform:uppercase;
+ color:#7c7c7c; display:block; font-weight:normal; letter-spacing:3px; }
+.page-wrapper .sidebar-icon p.arrow{ margin:10px 0 0 0;}
+.page-wrapper.sidebar-collapsed .sidebar-icon p.arrow{ margin:10px 0 0 0;}
+
+
+
+
